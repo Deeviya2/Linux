@@ -4,3 +4,49 @@
 •	touch test_dir/example.txt
  
 •	mv test_dir/example.txt test_dir/renamed_example.txt
+
+2. Viewing File Contents
+•	Display the complete /etc/passwd file.
+       cat /etc/passwd
+               cat reads and displays the complete contents of the specified file.
+ 
+•	Display only the first 5 lines.
+       head -n 5 /etc/passwd
+               head -n 5 displays the first five lines.
+ 
+•	Display only the last 5 lines.
+       tail -n 5 /etc/passwd
+                tail -n 5 displays the last five lines.
+ 
+3. Searching for Patterns
+•	Find all lines containing the word “root”.
+grep 'root' /etc/passwd
+grep searches each line and prints lines containing the specified pattern.
+ 
+4. Zipping and Unzipping
+•	Compress test_dir into test_dir.zip.
+zip -r test_dir.zip test_dir
+ 
+•	Extract test_dir.zip into unzipped_dir.
+mkdir -p unzipped_dir
+unzip test_dir.zip -d unzipped_dir
+zip -r recursively archives the directory. unzip extracts the archive into the destination directory.
+ 
+5. Downloading Files
+•	Download content from example.com using wget.
+wget https://unsplash.com/photos/keyboard-and-stool-in-a-sunlit-room-og8C5C6H-BI
+wget retrieves content from a URL.
+ 
+6. Changing Permissions
+•	Create secure.txt and make it read-only for everyone.
+touch secure.txt
+chmod 444 secure.txt
+stat -c '%A %a %n' secure.txt
+chmod 444 gives read permission to the owner, group, and others, removing write and execute permissions. The resulting permission string is -r--r--r--.
+ 
+7. Working with Environment Variables
+•	Set MY_VAR to “Hello, Linux!” using export.
+export MY_VAR='Hello, Linux!'
+echo "$MY_VAR"
+export sets an environment variable for the current shell and child processes. echo verifies its value.
+
