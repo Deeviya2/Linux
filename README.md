@@ -1,6 +1,2 @@
 # Linux
 #Linux commands
-# Creating and Renaming Files/Directories
-mkdir test_dir
-touch test_dir/example.txt
-mv test_dir/example.txt test_dir/renamed_example.txt
